@@ -1,13 +1,12 @@
 #pragma once
-
 #include <string>
 
 class User{
     private:
-        int id;
-        std::string name;
+        int id_;
+        std::string name_;
     public:
-        User(const std::string& userName, int userId);
+        User(const std::string& name, int id);
         int getId();
         std::string getName();
         void printInfo();

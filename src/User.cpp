@@ -1,15 +1,15 @@
+# include "User.h"
 #include <iostream>
 
-# include "User.h"
+User::User(const std::string& name, int id)
+    : name_(name), id_(id){}
 
-User::User(const std::string& userName, int userId)
-    : name(userName), id(userId){}
+int User::getId(){return id_;}
 
-int User::getId(){return id;}
-
-std::string User::getName(){return name;}
+std::string User::getName(){return name_;}
 
 void User::printInfo(){
-    std::cout << "User Id: " << id << std::endl;
-    std::cout << "User Name: " << name << std::endl;
+    std::cout << "userInfo:" << std::endl 
+    << "    User Id: " << id_ << std::endl 
+    << "    User Name: " << name_ << std::endl;
 }
