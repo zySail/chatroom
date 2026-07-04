@@ -8,9 +8,9 @@ Message::Message(int senderId, int receiverId, const std::string &content)
 
 void Message::printInfo() const{
     std::cout << "messageInfo:" << std::endl
-        << "senderId: " << senderId_  << std::endl
-        << "receiverId: " << receiverId_  << std::endl
-        << "content: " << content_ << std::endl
-        << "timestamp: " << timestamp_ << std::endl; 
+        << "    senderId: " << senderId_  << std::endl
+        << "    receiverId: " << receiverId_  << std::endl
+        << "    content: " << content_ << std::endl
+        << "    timestamp: " << timestamp_ << std::endl; 
 }
 
