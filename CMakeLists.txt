@@ -8,4 +8,5 @@ add_executable(chatroom
     src/main.cpp
     src/User.cpp
     src/Message.cpp
+    src/ChatSystem.cpp
 )

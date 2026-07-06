@@ -1,13 +1,16 @@
-#include "User.h"
-#include "Message.h"
+#include "ChatSystem.h"
 #include <iostream>
 
 int main()
 {
     std::cout << "Init ChatRoom" << std::endl;
-    User user1("zhang", 1);
-    user1.printInfo();
-    Message message1(1, 2, "This is a message");
-    message1.printInfo();
+    ChatSystem chat;
+    chat.addUser("Zhang");
+    chat.addUser("Li");
+    chat.showAllUsers();
+    if(auto user = chat.findUser(1))
+        std::cout << user->getName() << std::endl;
+    if(auto user = chat.findUser(3))
+        std::cout << user->getName() << std::endl;
     return 0;
 }
