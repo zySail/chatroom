@@ -1,8 +1,7 @@
 # include "User.h"
 #include <iostream>
 
-User::User(const std::string& name, int id)
-    : name_(name), id_(id){}
+User::User(int id, const std::string& name): id_(id), name_(name){}
 
 int User::getId(){return id_;}
 

@@ -6,7 +6,7 @@ class User{
         int id_;
         std::string name_;
     public:
-        User(const std::string& name, int id);
+        User(int id, const std::string& name);
         int getId();
         std::string getName();
         void printInfo();
