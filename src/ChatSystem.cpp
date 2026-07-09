@@ -2,7 +2,7 @@
 #include <iostream>
 
 ChatSystem::ChatSystem():nextUserId_(1){
-    //messages_.reserve(100);
+    messages_.reserve(100);
 }
 
 int ChatSystem::addUser(const std::string& name){
@@ -29,4 +29,17 @@ void ChatSystem::showAllUsers(){
                   << ", Name: " << it->second->getName() 
                   << std::endl;
     }
+}
+
+void ChatSystem::addMessage(Message newMessage){
+    messages_.push_back(newMessage);
+}
+
+// std::vector<Message> ChatSystem::getMessages(int id1, int id2){
+
+// }
+
+void ChatSystem::showAllMessages(){
+    for(const auto& message : messages_)
+        message.printInfo();
 }
